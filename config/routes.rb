@@ -4,19 +4,19 @@ Rails.application.routes.draw do
 
 
  # Display index of all users
-  get 'users' , to: 'users#index', as: all_users
+  get 'users' , to: 'users#index'
  # Persist user instance to db.
-  post 'users', to: 'users#create', as: create_user
+  post 'users', to: 'users#create'
  # Create a new user instance. 
-  get 'users/new', to: 'users#new', as: new_user
+  get 'users/new', to: 'users#new'
  # Display form to edit an existing user
-  get 'users/:id/edit', to: 'users#edit', as: edit_user
+  get 'users/:id/edit', to: 'users#edit'
  # Show instance of user
-  get 'users/:id', to: 'users#show', as: show_user
+  get 'users/:id', to: 'users#show'
  # Persist edit to user to the db.
-  patch 'users/:id', to: 'users#update', as: update_user
+  patch 'users/:id', to: 'users#update'
  # Overwrite user instance with new data. 
   put 'users/:id', to: 'users#update'
  # Delete(destroy) user instance
-  delete 'users/:id', to 'users#destroy', as: delete_user
+  delete 'users/:id', to: 'users#destroy'
 end
