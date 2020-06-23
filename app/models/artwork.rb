@@ -14,5 +14,5 @@ class Artwork < ApplicationRecord
     foreign_key: :artwork_id,
     primary_key: :id
 
-  has_many :viewers, through: :views, source: :viewer
+  has_many :shared_viewers, through: :views, source: :viewer
 end
