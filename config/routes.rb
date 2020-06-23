@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :artworkshares, only: [:create, :destroy]
 
+  resources :comments, only: [:create, :index, :destroy]
+
 
 #  # Display index of all users
 #   get 'users' , to: 'users#index'
